@@ -32,13 +32,13 @@ Inputs:
 - To manage Abhimanyu's battles using a dynamic programming approach, defined a 3D DP vector to represent his state. The states are defined by:
 1. The current circle he is fighting in.
 2. The number of skips left denoted by a.
-3. The number of regenerates left denoted by b.
-- The state of dp vector will store the maximum power Abhimanyu has left after battling in current circle, given the number of skips and regenerates available.
+3. The number of recharges left denoted by b.
+- The state of dp vector will store the maximum power Abhimanyu has left after battling in current circle, given the number of skips and recharges available.
 - Base Case: If Abhimanyu crosses the last circle, return true.
 - Logic:
   - If the current enemy's power is strictly greater than Abhimanyu's current power:
-    - Abhimanyu can skip the monster, adjusting for the cases with remaining skips and regenerates.
-    - Abhimanyu can regenerate himself to his initial power.
+    - Abhimanyu can skip the enemy, adjusting for the cases with remaining skips and recharges.
+    - Abhimanyu can recharges himself to his initial power.
   - Otherwise, Abhimanyu will fight the enemy, and we update the dp vector states accordingly.
   - The aim of function `canAbhimanyuCrossChakravyuh` is to return the power Abhimanyu has left after fighting the last enemy.
 
