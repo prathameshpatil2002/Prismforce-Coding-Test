@@ -4,6 +4,14 @@ using namespace std;
 // For Recharge Purpose
 int AbhimanyuPowerGlobal;
 
+/**
+ * enemies : vector of power of enemy in circles
+ * i : current circle / enemy index
+ * a : available skips
+ * b : available recharges
+ * dp : dp vector to store state
+ * @return maximum power corresponding state
+ **/
 int canAbhimanyuCrossChakravyuh(vector<int> &enemies, int i, int p, int a, int b, vector<vector<vector<int>>> &dp)
 {
    // Abhimanyu covered all circles
