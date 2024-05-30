@@ -60,16 +60,25 @@ int main()
    int ans = canAbhimanyuCrossChakravyuh(enemies, 0, AbhimanyuPowerGlobal, a, b, dp);
 
    // checking is there any combination of a and b leading to non negative power
+   int nonNegativePower = 0;
+
    for (int i = 0; i <= a; i++)
    {
       for (int j = 0; j <= b; j++)
       {
          if (dp[11][i][j] >= 0)
          {
-            cout << "YES";
-            return 0;
+            nonNegativePower++;
          }
       }
    }
-   cout << "NO";
+   if (nonNegativePower)
+   {
+      cout << "YES";
+   }
+   else
+   {
+      cout << "NO";
+   }
+   return 0;
 }
